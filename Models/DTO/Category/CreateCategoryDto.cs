@@ -1,4 +1,4 @@
-﻿namespace dotnet_api.Models.DTO;
+﻿namespace API.Models.DTO;
 
 public class CreateCategoryDto
 {

@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace API.Models.Domain;
 
-namespace dotnet_api.Models.Domain;
-
-public partial class User
+public partial class User : BaseEntity
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     public string Email { get; set; } = null!;
 
     public string? Name { get; set; }
 
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime UpdatedAt { get; set; }
-
-    public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
+    public ICollection<Post> Posts { get; set; } = new List<Post>();
 }
